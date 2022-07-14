@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  background: white;
+  background-repeat: no;
+}
+
+body,
+button {
+  font-weight: bold;
+}
+
+.main-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+.top-title {
+  font-size: 50px;
+  margin-bottom: 100px;
+}
+
+.title {
+  position: absolute;
+  left: 5rem;
+}
+
+.register-image {
+  width: 60vw;
+  height: 99vh;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 15px;
+}
+
+.first-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  margin-top: 50px;
+  width: 20rem;
+  gap: 5px;
+  text-align: center;
+  background-color: var(--primaryColor);
+}
+
+.second-container {
+  display: flex;
+  text-align: start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label-text {
+  font-weight: bolder;
+}
+
+mat-form-field {
+  display: block;
+  width: 25vw;
+}
+
+::placeholder {
+  color: #939897;
+  opacity: 0.5;
+}
+
+button {
+  margin-top: 20px;
+  width: 20rem;
+  height: 2.5rem;
+  font-size: 18px;
+}
+
+button:hover {
+  border: 1px solid black;
+}
+
+p {
+  font-size: 30px;
+  text-align: center;
+}
+
+mat-error {
+  font-size: 15px;
+}

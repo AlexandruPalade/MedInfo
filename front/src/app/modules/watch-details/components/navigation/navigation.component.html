@@ -1,0 +1,51 @@
+<div class="main-container">
+  <div class="navigation-details-container">
+    <div class="top-container">
+      <div class="user-details">
+        <img src="../../../assets/user.png" class="user-img" />
+        <a class="username" [routerLink]="'edit-profile'">{{
+          loggedInUser?.username
+        }}</a>
+      </div>
+
+      <div class="page-details">
+        <div class="buttons-images">
+          <img src="../../../assets/home.png" class="logo" />
+          <button mat-button class="details" [routerLink]="'home'">Home</button>
+        </div>
+
+        <div class="buttons-images">
+          <img src="../../../assets/heart-logo.png" class="logo" />
+          <button mat-menu-item [routerLink]="'heart-rate'" class="details">
+            Heart rate
+          </button>
+        </div>
+
+        <div class="buttons-images">
+          <img src="../../../assets/blood-logo.png" class="logo" />
+          <button mat-menu-item [routerLink]="'blood-pressure'" class="details">
+            Blood pressure
+          </button>
+        </div>
+
+        <div class="buttons-images">
+          <img src="../../../assets/map.png" class="logo" />
+          <button mat-menu-item [routerLink]="'geofance'" class="details">
+            Geofance
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button
+        [routerLink]="['/auth/login']"
+        (click)="logout()"
+        class="logout-button"
+      >
+        LogOut
+      </button>
+    </div>
+  </div>
+</div>
+<div></div>

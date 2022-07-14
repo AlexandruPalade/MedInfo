@@ -1,0 +1,62 @@
+<form [formGroup]="loginForm">
+  <div class="main-container">
+    <div class="container">
+      <div class="left-container">
+        <div>
+          <h1 class="top-title">Welcome to MedInfo</h1>
+        </div>
+
+        <div>
+          <h1 class="title">Sign in</h1>
+        </div>
+
+        <div class="contaier-inputs-buttons">
+          <mat-form-field class="second-container">
+            <mat-label>Email</mat-label>
+            <input
+              type="email"
+              matInput
+              [formControlName]="'email'"
+              placeholder="Ex. pat@example.com"
+          /></mat-form-field>
+          <mat-form-field class="second-container">
+            <mat-label>Password</mat-label>
+            <input
+              type="password"
+              matInput
+              [formControlName]="'password'"
+              placeholder="password"
+            />
+          </mat-form-field>
+
+          <div class="buttons-container">
+            <button
+              mat-raised-button
+              color="warn"
+              type="button"
+              [routerLink]="'../register'"
+              mat-stroked-button
+              color="warn"
+            >
+              Register
+            </button>
+
+            <button
+              mat-raised-button
+              color="warn"
+              type="button"
+              [disabled]="loginForm.invalid"
+              mat-stroked-button
+              (click)="onLoginClick()"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="right-container">
+        <img src="../../../assets/login.png" />
+      </div>
+    </div>
+  </div>
+</form>

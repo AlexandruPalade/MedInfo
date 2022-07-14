@@ -1,0 +1,95 @@
+<form [formGroup]="editForm">
+  <div class="main-container">
+    <div class="container">
+      <div>
+        <h1 class="top-title">Edit your profile</h1>
+      </div>
+
+      <div class="contaier-inputs-buttons">
+        <mat-form-field class="second-container">
+          <mat-label for="email">Email</mat-label>
+          <input
+            type="email"
+            matInput
+            [formControlName]="'email'"
+            placeholder="Ex. pat@example.com"
+            name="email"
+        /></mat-form-field>
+        <mat-error
+          *ngIf="
+            editForm.controls['email'].invalid &&
+            (editForm.controls['email'].dirty ||
+              editForm.controls['email'].touched)
+          "
+          class="alert"
+        >
+          <mat-error *ngIf="editForm.get('email')?.errors?.['required']"
+            >This field is required</mat-error
+          >
+          <mat-error *ngIf="editForm.get('email')?.errors?.['pattern']"
+            >Format for email
+          </mat-error>
+        </mat-error>
+
+        <mat-form-field class="second-container">
+          <mat-label>Username</mat-label>
+          <input
+            type="text"
+            matInput
+            [formControlName]="'username'"
+            placeholder="username"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="second-container">
+          <mat-label>Age</mat-label>
+          <input
+            type="number"
+            matInput
+            [formControlName]="'age'"
+            placeholder="age"
+          />
+        </mat-form-field>
+        <mat-error
+          *ngIf="
+            editForm.controls['age'].invalid &&
+            (editForm.controls['age'].dirty || editForm.controls['age'].touched)
+          "
+          class="alert"
+        >
+          <mat-error *ngIf="editForm.get('age')?.errors?.['required']"
+            >This field is required</mat-error
+          >
+          <mat-error *ngIf="editForm.get('age')?.errors?.['min']"
+            >At least 16 years old
+          </mat-error>
+        </mat-error>
+
+        <div class="buttons-container">
+          <button
+            mat-raised-button
+            color="warn"
+            type="button"
+            [routerLink]="'../register'"
+            mat-stroked-button
+            color="warn"
+            (click)="cancelEdit()"
+          >
+            Cancel
+          </button>
+
+          <button
+            mat-raised-button
+            color="warn"
+            type="button"
+            [disabled]="editForm.invalid"
+            mat-stroked-button
+            (click)="editProfile()"
+          >
+            Edit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

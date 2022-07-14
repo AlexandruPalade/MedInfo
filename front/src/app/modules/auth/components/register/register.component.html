@@ -1,0 +1,99 @@
+<form [formGroup]="registerForm">
+  <span class="main-container">
+    <div class="left-container">
+      <img src="../../assets/register.png" class="register-image" />
+    </div>
+    <div class="right-container">
+      <div><p class="top-title">Sign up to MedInfo</p></div>
+
+      <mat-form-field class="second-container">
+        <mat-label for="email">Email</mat-label>
+        <input
+          type="email"
+          matInput
+          [formControlName]="'email'"
+          placeholder="Ex. pat@example.com"
+          name="email"
+        />
+        <mat-error *ngIf="registerForm.invalid">{{
+          getErrorMessageEmail()
+        }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="second-container">
+        <mat-label for="password">Password</mat-label>
+        <input
+          type="password"
+          matInput
+          [formControlName]="'password'"
+          placeholder="Ex. pat@example.com"
+          name="email"
+        />
+        <mat-error *ngIf="registerForm.invalid">{{
+          getErrorMessagePassword()
+        }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="second-container">
+        <mat-label>Username</mat-label>
+        <input
+          type="text"
+          matInput
+          [formControlName]="'username'"
+          placeholder="username"
+        />
+        <mat-error *ngIf="registerForm.invalid">{{
+          getErrorMessage()
+        }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="second-container">
+        <mat-label>Firstname</mat-label>
+        <input
+          type="text"
+          matInput
+          [formControlName]="'firstname'"
+          placeholder="firstname"
+        />
+        <mat-error *ngIf="registerForm.invalid">{{
+          getErrorMessage()
+        }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="second-container">
+        <mat-label>Lastname</mat-label>
+        <input
+          type="text"
+          matInput
+          [formControlName]="'lastname'"
+          placeholder="lastname"
+        />
+        <mat-error *ngIf="registerForm.invalid">{{
+          getErrorMessage()
+        }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="second-container">
+        <mat-label>Age</mat-label>
+        <input
+          type="number"
+          matInput
+          [formControlName]="'age'"
+          placeholder="age"
+        />
+        <mat-error *ngIf="registerForm.invalid">{{
+          getErrorMessageAge()
+        }}</mat-error>
+      </mat-form-field>
+
+      <button
+        mat-flat-button
+        color="primary"
+        (click)="onRegisterClick()"
+        [disabled]="this.registerForm.invalid"
+      >
+        Register
+      </button>
+    </div>
+  </span>
+</form>

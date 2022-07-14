@@ -1,0 +1,96 @@
+.main-container {
+  display: flex;
+  height: 100%;
+}
+
+.home {
+  float: right;
+}
+
+.navigation-details-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #220646;
+  width: 15vw;
+  justify-content: space-between;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-details {
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  height: 10vh;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.user-img {
+  width: 3vw;
+}
+
+.username {
+  color: white;
+  text-align: center;
+}
+
+.page-details {
+  margin-top: 20px;
+  align-self: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.buttons-images {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  width: 2vw;
+  height: 4vh;
+}
+
+.details {
+  font-size: 15px;
+  color: white;
+  border: 0;
+  background-color: inherit;
+  text-align: left;
+}
+
+.menu {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+}
+
+.pacient-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10%;
+}
+
+.button-container {
+  margin-top: 10px;
+  float: inline-end;
+}
+
+.logout-button {
+  width: 100%;
+  height: 5vh;
+  background-color: #15012e;
+  color: white;
+  border: 0;
+}

@@ -1,0 +1,59 @@
+<div class="main-container">
+  <div class="text">
+    <div class="top-container">
+      <div class="about">
+        <mat-card-title class="info">What is blood pressure?</mat-card-title>
+        <span class="text"
+          >Blood pressure is the force applied by the blood over the inner walls
+          of the arteries.
+        </span>
+      </div>
+
+      <div class="about">
+        <mat-card-title class="info">Blood pressure</mat-card-title>
+        <div class="oxygen-container">
+          <span>{{ watchData.bloodPressure }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="table-container">
+      <mat-card-title class="info"
+        >Here are some information about Blood pressure</mat-card-title
+      >
+      <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="category">
+          <th mat-header-cell *matHeaderCellDef>Category</th>
+          <td mat-cell *matCellDef="let element">{{ element.category }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="systolic">
+          <th mat-header-cell *matHeaderCellDef>Systolic</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.systolic }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="diastolic">
+          <th mat-header-cell *matHeaderCellDef>Diastolic</th>
+          <td mat-cell *matCellDef="let element">{{ element.diastolic }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="management">
+          <th mat-header-cell *matHeaderCellDef>Management</th>
+          <td mat-cell *matCellDef="let element">{{ element.management }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+  </div>
+
+  <footer class="link">
+    If you want to learn more about Blood Pressure
+    <a
+      href="https://www.nhs.uk/common-health-questions/lifestyle/what-is-blood-pressure/"
+      >click here</a
+    >
+  </footer>
+</div>

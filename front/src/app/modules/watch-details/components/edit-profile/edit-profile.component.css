@@ -1,0 +1,31 @@
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 80vw;
+   text-align: center;
+}
+.contaier-inputs-buttons{
+display: flex;
+flex-direction: column;
+margin-bottom: 300px;
+}
+
+.second-container{
+    width: 20vw;
+}
+
+.mat-input{
+    width: 10vw;
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button{
+    width: 8vw;
+}
