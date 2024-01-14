@@ -22,7 +22,6 @@ export class UserService {
   }
 
   editUser(id: string, updatedUser: User) {
-    console.log(id);
     return this.httpClient.put(`api/users/update/${id}`, updatedUser);
   }
 }
